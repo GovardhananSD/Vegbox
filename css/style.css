@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+nav {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 10vh;
+	background: #fff;
+}
+.logo {
+	color: #000000;
+	text-transform: capitalize;
+	font-size: 24px;
+	cursor: pointer;
+	font-weight: 900;
+	letter-spacing: 1px;
+}
+.logo span {
+	color: deepskyblue;
+}
+.menu {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-around;
+	width: 30%;
+}
+.menu li {
+	list-style: none;
+}
+.menu a {
+	color: #000000;
+	text-decoration: none;
+	font-size: 15px;
+	padding: 30px;
+	font-weight: 600;
+	transition: .9s;
+}
+.menu a:hover {
+	letter-spacing: 2px;
+}
+.bar {
+	display: none;
+	cursor: pointer;
+}
+.bar div {
+	width: 25px;
+	height: 3px;
+	background-color: #000000;
+	margin: 5px;
+	transition: all .5s ease;
+}
+@media screen and (max-width:1024px) {
+	.menu {
+		width: 60%;
+	}
+}
+@media screen and (max-width:768px) {
+	body {
+		overflow-x: hidden;
+	}
+	.menu {
+		position: absolute;
+		right: -100%;
+		height: 90vh;
+		top: 10vh;
+		background-color: #000;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in-out;
+	}
+	.bar {
+		display: block;
+	}
+}
+.nav-active {
+	transform: translateX(-100%);
+}
+.bar-active .bar-1 {
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+.bar-active .bar-2 {
+	opacity: 0;
+}
+.bar-active .bar-3 {
+	transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+
+h1{
+  font-size: 50px;
+  color: #FFF;
+  padding: 10px 0px;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  font-family: "Open Sans", sans-serif;
+  background-size: cover;
+  background-position: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.swiper-button-prev:hover {
+  color: #fff;
+  transition: all linear 0.3s;
+}
+
+.swiper-button-next:hover {
+  color: #000000;
+  transition: all linear 0.3s;
+}

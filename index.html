@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Vegbox</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+        <nav>
+            <div class="logo">
+                <h5>Vegbox</h5>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="bar">
+                <div class="bar-1"></div>
+                <div class="bar-2"></div>
+                <div class="bar-3"></div>
+            </div>
+        </nav>
+    </header>
+
+<div class="swiper">
+
+  <div class="swiper-wrapper">
+
+    <div class="swiper-slide" style="background-image: url(https://source.unsplash.com/random?sig=2);">
+      <h2>Naturally Grown</h2>
+      <h1>Vegetables & Fruits</h1>
+      <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+    </div>
+    <div class="swiper-slide" style="background-image: url(https://source.unsplash.com/random?);">
+      <h2>Naturally Grown</h2>
+      <h1>Vegetables & Fruits</h1>
+      <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+    </div>
+    <div class="swiper-slide" style="background-image: url(https://source.unsplash.com/random?sig=3);">
+      <h2>Naturally Grown</h2>
+      <h1>Vegetables & Fruits</h1>
+      <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+    </div>
+  </div>
+
+  <div class="swiper-pagination"></div>
+
+
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+
+  <div class="swiper-scrollbar"></div>
+</div>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script>
+const swiper = new Swiper(".swiper", {
+
+  direction: "horizontal",
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+
+  scrollbar: {
+    el: ".swiper-scrollbar"
+  }
+});
+
+
+        const X = () => {
+            const menu = document.querySelector('.bar');
+            const nav = document.querySelector('.menu');
+
+            menu.addEventListener('click', () => {
+               menu.classList.toggle('bar-active');
+                nav.classList.toggle('nav-active');
+            });
+        }
+        X();
+
+</script>
+
+
+
+</body>
+
+</html>
